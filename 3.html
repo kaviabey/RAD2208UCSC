@@ -2,38 +2,45 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-
-    <style>
-      input {
-        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-        width: 50%;
-        height: 25px;
-        border-radius: 5px;
-        margin: 5px;
-      }
-      #click-btn {
-        background-color: rgb(110, 188, 33);
-        width: 150px;
-        padding: 10px;
-        border-radius: 5px;
-        cursor: pointer;
-        border: 1px solid;
-    margin: 6px;
-      }
-    </style>
+    <title>Counter</title>
+<style>
+   input{
+    display: block;
+    border-radius: 5px;
+   }
+</style>
+    <!-- styles -->
+    <!-- <link rel="stylesheet" href="styles.css" /> -->
   </head>
-
   <body>
-    Width:<br />
-    <input type="text" name="Name" placeholder= "Insert width" /><br />
-    Height:<br />
-    <input type="text" placeholder= "Insert height"  /><br />
-    <button type="button" id="click-btn">
-      Find Area</button><div id = "msg"></div>
-    <script type = "text/javascript" src = "Assignment4.js"></script>
+    <div id="txt"></div>
+    <label for  = "name">Name</label>
+    <input type="text" id="name" /><br/>
+    <label for="date">Date</label
+    ><input
+      type="text"
+      id="date"
+      placeholder="required in the yyyy/mm/dd format"
+    />
+
+    
+ <br />
+    <button
+      onclick='
+    let names = document.getElementById("name").value;
+    let dates = document.getElementById("date").value;
+    let age;
+    let day =  new Date(dates);
+   let today = new Date();
+    if(today.getMonth() <= day.getMonth() &&  today.getDate() <= day.getDate())
+    age = today.getFullYear()-day.getFullYear();
+
+    else 
+     age =  today.getFullYear()-day.getFullYear()-1;
+         window.alert("I am "+names+" and  I am "+age+" years old.")
+'   style = "background-color: green;color:white; width:200px;padding:10px;border-radius:10px">
+      Click
+    </button>
   </body>
 </html>
