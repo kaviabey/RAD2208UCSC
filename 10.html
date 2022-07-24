@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="text/javascript">
+     function insert(c)
+     {
+
+       document.Form.textview.value = document.Form.textview.value + c;
+     };
+
+     function clear(){
+let test = document.getElementById('body');
+console.log(test);
+    test.parentElement.value = "";
+     }
+
+
+     function equal(){
+      let e = eval(document.Form.textview.value);
+      document.Form.textview.value = e;
+
+     }
+  </script><style type = "text/css">
+/* #body{
+
+  border:2px solid black;
+} */
+
+  </style>
+
+</head>
+<body>
+
+  
+  <form name= "Form">
+    <input type = "textArea" name  = "textview" />
+    <div id  = 'body'>
+      <table  border = "2px solid black">
+     <tr>
+      <td><input type = "button" value="C"  onclick = "clear()" /></td>
+      <td><input type = "button" value="/"  onclick = "insert('/')" /></td>
+      <td colspan = "2"><input type = "button" value="*" name = "Clean"  onclick ="insert('*')" /></td>
+     
+       
+     </tr>
+     <tr>
+      <td><input type = "button" value="1"  onclick ="insert('1')"/></td>
+      <td><input type = "button" value="2"  onclick ="insert('2')"/></td>
+      <td><input type = "button" value="3"  onclick ="insert('3')"/></td>
+      <td><input type = "button" value="-" onclick ="insert('-')"/></td>
+       
+     </tr>
+     <tr>
+      <td><input type = "button" value="4"  onclick ="insert('4')"/></td>
+      <td><input type = "button" value="5"  onclick ="insert('5')"/></td>
+      <td><input type = "button" value="6"  onclick ="insert('6')"/></td>
+      <td><input type = "button" value="+"  onclick ="insert('+')"/></td>
+       
+     </tr>
+     <tr>
+      <td><input type = "button" value="7"  onclick ="insert('7')"/></td>
+      <td><input type = "button" value="8"  onclick ="insert('8')"/></td>
+      <td><input type = "button" value="9" onclick ="insert('9')"/></td>
+      <td><input type = "button" value="="  onclick ="equal()" /></td>
+       
+     </tr>
+     <tr>
+      <td><input type = "button" value="0" name = "Clean" onclick ="insert('0')" /></td>
+      <td colspan = "3"><input type = "button" value="." name = "Clean" onclick ="insert('.')"/></td>
+      
+     </tr>
+
+   </table>
+      </div>
+  
+
+  </form>
+</body>
+</html>
